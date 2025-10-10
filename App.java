@@ -54,7 +54,7 @@ public class App extends Application {
         Button btSavePalette = new Button("Save Palette");
         Button btLoadPalette = new Button("Load Palette");
         Button btView = new Button("View"); // Shows just the artwork, allowing for easier screenshot
-        buttonsBox.getChildren().addAll(btSaveArt, btLoadArt, btSavePalette, btLoadPalette, btView);
+        buttonsBox.getChildren().addAll(btSaveArt, btLoadArt, btSavePalette, btLoadPalette, btView, new Label("While viewing artwork, \n click to return to editor."));
         border.setLeft(buttonsBox);
 
         for (int i = 0; i < 16; i++) {
@@ -77,8 +77,16 @@ public class App extends Application {
         }
         Rectangle current = new Rectangle(0, 0, 60, 60);
         Circle colorpick = new Circle(30);
+        Label lblCurrent = new Label("Current");
+        Label lblSelector = new Label("Selector");
+        Button btPrevious = new Button("Previous");
+        Button btNext = new Button("Next");
         palette.add(current, 0, 5);
-        palette.add(colorpick, 1, 5);;
+        palette.add(colorpick, 1, 5);
+        palette.add(lblCurrent, 0, 6);
+        palette.add(lblSelector, 1, 6);
+        palette.add(btPrevious, 0, 7);
+        palette.add(btNext, 1, 7);
         border.setRight(palette);
 
         Scene scene = new Scene(border);
