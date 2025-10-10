@@ -1,4 +1,4 @@
-package PixelArt;
+
 
 import javafx.scene.paint.Color;
 
