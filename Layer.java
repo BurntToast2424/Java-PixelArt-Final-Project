@@ -12,6 +12,11 @@ public class Layer extends Grid {
         this.x = x;
         this.y = y;
         this.grid = new Color[x][y];
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                this.grid[i][j] = Color.BLACK;
+            }
+        }
     }
     //* Creates a layer with a specified grid */
     public Layer(int ID, boolean visible, Color[][] grid, int x, int y) {

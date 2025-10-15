@@ -8,15 +8,20 @@ public class Palette extends Grid {
     //* Creates a blank palette */
     public Palette(int ID) {
         this.paletteID = ID;
-        this.x = 5;
-        this.y = 2;
-        this.grid = new Color[5][2];
+        this.x = 2;
+        this.y = 5;
+        this.grid = new Color[2][5];
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                this.grid[i][j] = Color.BLACK;
+            }
+        }
     }
     //* Load a palette */
     public Palette(int ID, Color[][] grid) {
         this.paletteID = ID;
-        this.x = 5;
-        this.y = 2;
+        this.x = 2;
+        this.y = 5;
         this.grid = grid;
     }
     //* Returns palette id */

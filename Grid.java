@@ -9,9 +9,9 @@ public abstract class Grid {
 
     //* Create default Grid */
     public Grid() {
-        this.grid = new Color[15][15];
-        this.x = 15;
-        this.y = 15;
+        this.grid = new Color[16][16];
+        this.x = 16;
+        this.y = 16;
     }
     //* Create specific sized Grid */
     public Grid(int x, int y) {

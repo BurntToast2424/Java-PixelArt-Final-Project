@@ -11,11 +11,11 @@ public class Artwork extends Grid {
 
     //* Creates a default, blank artwork */
     public Artwork() {
-        this.grid = new Color[15][15];
-        this.x = 15;
-        this.y = 15;
+        this.grid = new Color[16][16];
+        this.x = 16;
+        this.y = 16;
         this.layers = new ArrayList<Layer>();
-        this.layers.add(new Layer(0, 15, 15));
+        this.layers.add(new Layer(0, 16, 16));
         this.currentLayer = this.layers.getFirst();
         this.name = "Untitled";
     }
@@ -28,6 +28,11 @@ public class Artwork extends Grid {
         this.layers.add(new Layer(0, x, y));
         this.currentLayer = this.layers.getFirst();
         this.name = "Untitled";
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                this.grid[i][j] = Color.BLACK;
+            }
+        }
     }
     //* Load an existing artwork */
     public Artwork(List<Layer> layers, String name, int x, int y) {
